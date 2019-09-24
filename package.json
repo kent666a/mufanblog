@@ -1,14 +1,14 @@
 {
-    "name": "hux-blog",
-    "title": "淇奥读书",
-    "author": "Hux <huxpro@gmail.com>",
+    "name": "Kent",
+    "title": "木凡",
+    "author": "Kent <124454731@qq.com>",
     "version": "1.8.2",
-    "homepage": "http://huxpro.github.io",
+    "homepage": "http://kent666a.github.io",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Huxpro/huxpro.github.io"
+        "url": "https://github.com/kent666a/mufanblog"
     },
-    "bugs": "https://github.com/Huxpro/huxpro.github.io/issues",
+    "bugs": "https://github.com/kent666a/mufanblog/issues",
     "devDependencies": {
         "grunt": "~0.4.5",
         "grunt-contrib-less": "~0.11.4",
