@@ -44,7 +44,6 @@ function loadJS(url, callback) {
 		script.onload = function () {
 			fn();
 		};
-
 	}
 	script.src = url;
 	document.getElementsByTagName('head')[0].appendChild(script);
@@ -52,13 +51,29 @@ function loadJS(url, callback) {
 }
 
 if (!flag) {
+	let isShow = true;
 	let url = "https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js";
 	loadJS(url, function () {
 		L2Dwidget.init();
 		setTimeout(removeBorder, 1000);
-	})
+		document.getElementById("girlBtn").innerHTML = '隐藏妹子';
+	});
 
 	function removeBorder() {
 		document.getElementById("live2dcanvas").style.border = "";
+	}
+
+	function showOrHide() {
+		if (isShow) {
+			document.getElementById("live2d-widget").style.display = "none";
+			document.getElementById("girlBtn").innerHTML = '给我一个妹子';
+		}
+		else{
+			L2Dwidget.init();
+			setTimeout(removeBorder, 1000);
+			document.getElementById("girlBtn").innerHTML = '隐藏妹子';
+		}
+		isShow = !isShow;
+
 	}
 }
